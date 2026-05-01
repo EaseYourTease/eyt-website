@@ -52,9 +52,6 @@ export function Navbar() {
       
         {isOpen && (
           <div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
             className="md:hidden glass border-t border-slate-800/50"
           >
             <div className="px-6 py-4 flex flex-col gap-4">
