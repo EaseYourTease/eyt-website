@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import { ArrowRight, Cpu, Layers, Zap, Shield, BarChart3, Target, Rocket, Users, Building2, GraduationCap, BookOpen } from 'lucide-react';
 
 export const metadata: Metadata = {
