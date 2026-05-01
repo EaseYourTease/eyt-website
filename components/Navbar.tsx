@@ -49,7 +49,7 @@ export function Navbar() {
           </button>
         </div>
       </div>
-      <AnimatePresence>
+      
         {isOpen && (
           <div
             initial={{ opacity: 0, height: 0 }}
@@ -78,7 +78,7 @@ export function Navbar() {
             </div>
           </div>
         )}
-      </AnimatePresence>
+      
     </nav>
   );
 }
