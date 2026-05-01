@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Zap } from 'lucide-react';
 
 const navLinks = [
@@ -52,7 +51,7 @@ export function Navbar() {
       </div>
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -77,7 +76,7 @@ export function Navbar() {
                 Book Strategy Call
               </Link>
             </div>
-          </motion.div>
+          </div>
         )}
       </AnimatePresence>
     </nav>
