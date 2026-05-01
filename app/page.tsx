@@ -20,20 +20,20 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-neon-cyan blur-[120px] opacity-20" />
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-[80px] animate-pulse-glow" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary/10 rounded-full blur-[100px] animate-pulse-glow" />
-        <motion.div
+        <div
           className="absolute top-[20%] right-[15%] w-4 h-4 bg-primary rounded-full animate-float"
           initial={{ opacity: 0.5 }}
           animate={{ opacity: 1, scale: [1, 1.2, 1] }}
           transition={{ duration: 3, repeat: Infinity }}
         />
-        <motion.div
+        <div
           className="absolute top-[60%] left-[10%] w-3 h-3 bg-secondary rounded-full animate-float"
           initial={{ opacity: 0.5 }}
           animate={{ opacity: 1, scale: [1, 1.3, 1] }}
           transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
         />
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -62,7 +62,7 @@ export default function HomePage() {
                 Book a Strategy Call
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
       
@@ -76,7 +76,7 @@ export default function HomePage() {
               { value: '1M+', label: 'Processes Automated' },
               { value: '98%', label: 'Client Satisfaction' },
             ].map((stat, i) => (
-              <motion.div
+              <div
                 key={i}
                 className="text-center glass rounded-2xl p-8 border border-primary/10"
                 initial={{ opacity: 0, y: 20 }}
@@ -86,7 +86,7 @@ export default function HomePage() {
               >
                 <div className="text-4xl md:text-5xl font-bold text-gradient mb-2">{stat.value}</div>
                 <div className="text-slate-400 text-sm uppercase tracking-wider">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -95,7 +95,7 @@ export default function HomePage() {
       {/* Problem Section */}
       <section className="py-24 border-t border-slate-800/50">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -105,7 +105,7 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-5xl font-bold mb-4">
               Most Organizations Are Built for the <span className="text-slate-500">Past.</span>
             </h2>
-          </motion.div>
+          </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
@@ -124,7 +124,7 @@ export default function HomePage() {
                 description: 'Random tools without a system create noise, not impact.',
               },
             ].map((item, i) => (
-              <motion.div
+              <div
                 key={i}
                 className="glass rounded-2xl p-8 border border-red-500/20"
                 initial={{ opacity: 0, y: 20 }}
@@ -143,7 +143,7 @@ export default function HomePage() {
                   <div className="w-8 h-8 bg-red-500/10 rounded-lg border border-red-500/30" />
                   <div className="w-8 h-8 bg-red-500/10 rounded-lg border border-red-500/30" />
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -152,16 +152,16 @@ export default function HomePage() {
       {/* Shift Section */}
       <section className="py-24 border-t border-slate-800/50">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.h2
+          <h2
             className="text-3xl md:text-5xl font-bold text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
             The Shift That Changes Everything
-          </motion.h2>
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
+            <div
               className="glass rounded-2xl p-8 border border-slate-700"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -190,8 +190,8 @@ export default function HomePage() {
                   Limited visibility and insights
                 </li>
               </ul>
-            </motion.div>
-            <motion.div
+            </div>
+            <div
               className="glass rounded-2xl p-8 border border-secondary/40 shadow-neon-green"
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -220,7 +220,7 @@ export default function HomePage() {
                   Complete visibility and control
                 </li>
               </ul>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -228,22 +228,22 @@ export default function HomePage() {
       {/* Core System Section */}
       <section id="solutions" className="py-24 border-t border-slate-800/50">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.h2
+          <h2
             className="text-3xl md:text-5xl font-bold text-center mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
             The Core System
-          </motion.h2>
-          <motion.p
+          </h2>
+          <p
             className="text-center text-slate-400 mb-12 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
             Three pillars that transform how your organization operates
-          </motion.p>
+          </p>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
@@ -265,7 +265,7 @@ export default function HomePage() {
                 color: 'secondary',
               },
             ].map((card, i) => (
-              <motion.div
+              <div
                 key={i}
                 className="glass rounded-2xl p-8 border border-slate-700 hover:border-primary/40 transition-colors"
                 initial={{ opacity: 0, y: 20 }}
@@ -276,7 +276,7 @@ export default function HomePage() {
                 <card.icon className="w-12 h-12 text-primary mb-4" />
                 <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
                 <p className="text-slate-400">{card.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -285,14 +285,14 @@ export default function HomePage() {
       {/* Solutions Cards Section */}
       <section className="py-24 border-t border-slate-800/50">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.h2
+          <h2
             className="text-3xl md:text-5xl font-bold text-center mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
             Built For Every Organization
-          </motion.h2>
+          </h2>
           <div className="grid md:grid-cols-3 gap-6 mt-12">
             {[
               {
@@ -314,7 +314,7 @@ export default function HomePage() {
                 href: '/for-institutes',
               },
             ].map((card, i) => (
-              <motion.div
+              <div
                 key={i}
                 className="glass rounded-2xl p-8 border border-primary/20 hover:border-primary/40 transition-all group"
                 initial={{ opacity: 0, y: 20 }}
@@ -328,7 +328,7 @@ export default function HomePage() {
                 <Link href={card.href} className="text-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
                   Learn More <ArrowRight className="w-4 h-4" />
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -337,14 +337,14 @@ export default function HomePage() {
       {/* Process Section */}
       <section className="py-24 border-t border-slate-800/50">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.h2
+          <h2
             className="text-3xl md:text-5xl font-bold text-center mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
             How We Transform
-          </motion.h2>
+          </h2>
           <div className="grid md:grid-cols-4 gap-6 mt-12">
             {[
               { num: '01', title: 'Discover', desc: 'Deep assessment of your current systems' },
@@ -352,7 +352,7 @@ export default function HomePage() {
               { num: '03', title: 'Deploy', desc: 'Seamless integration and rollout' },
               { num: '04', title: 'Drive Impact', desc: 'Measure, optimize, and scale' },
             ].map((step, i) => (
-              <motion.div
+              <div
                 key={i}
                 className="text-center glass rounded-2xl p-8 border border-primary/20"
                 initial={{ opacity: 0, y: 20 }}
@@ -363,7 +363,7 @@ export default function HomePage() {
                 <div className="text-4xl font-bold text-gradient mb-4">{step.num}</div>
                 <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
                 <p className="text-slate-400 text-sm">{step.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -372,21 +372,21 @@ export default function HomePage() {
       {/* Proof Section */}
       <section className="py-24 border-t border-slate-800/50">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.h2
+          <h2
             className="text-3xl md:text-5xl font-bold text-center mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
             Proof That It Works
-          </motion.h2>
+          </h2>
           <div className="grid md:grid-cols-3 gap-6 mt-12">
             {[
               { value: '70%', label: 'Time Saved', sub: 'Across client operations' },
               { value: '2X', label: 'Engagement Increase', sub: 'Student and customer engagement' },
               { value: '3X', label: 'Operational Efficiency', sub: 'Process throughput improvement' },
             ].map((card, i) => (
-              <motion.div
+              <div
                 key={i}
                 className="text-center glass rounded-2xl p-10 border border-secondary/30"
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -397,7 +397,7 @@ export default function HomePage() {
                 <div className="text-5xl font-bold text-secondary mb-2">{card.value}</div>
                 <div className="text-xl font-semibold mb-1">{card.label}</div>
                 <div className="text-slate-500 text-sm">{card.sub}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -406,21 +406,21 @@ export default function HomePage() {
       {/* Vision Section */}
       <section className="py-32 border-t border-slate-800/50">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <motion.h2
+          <h2
             className="text-3xl md:text-5xl font-bold leading-tight"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
             A Future Where <span className="text-gradient">AI Systems</span> Power Human Potential.
-          </motion.h2>
+          </h2>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-24">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <motion.div
+          <div
             className="glass rounded-3xl p-12 md:p-16 border border-primary/20 relative overflow-hidden"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -441,7 +441,7 @@ export default function HomePage() {
                 Book a Strategy Call <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>
