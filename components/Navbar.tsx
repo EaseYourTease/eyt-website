@@ -1,0 +1,85 @@
+'use client';
+
+import { useState } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, Zap } from 'lucide-react';
+
+const navLinks = [
+  { label: 'Corporates', href: '/for-corporates' },
+  { label: 'Schools', href: '/for-schools' },
+  { label: 'Institutes', href: '/for-institutes' },
+  { label: 'Solutions', href: '/solutions' },
+  { label: 'Case Studies', href: '/case-studies' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
+];
+
+export function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-slate-800/50">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex items-center justify-between h-16">
+          <Link href="/" className="flex items-center gap-2">
+            <Zap className="w-6 h-6 text-primary" />
+            <span className="font-bold text-lg tracking-tight">
+              Ease Your <span className="text-primary">Tease</span>
+            </span>
+          </Link>
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm text-slate-300 hover:text-primary transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Link
+              href="/contact"
+              className="px-4 py-2 rounded-full bg-primary text-bg font-semibold text-sm hover:shadow-neon-cyan transition-all"
+            >
+              Book Strategy Call
+            </Link>
+          </div>
+          <button className="md:hidden text-slate-300" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <X /> : <Menu />}
+          </button>
+        </div>
+      </div>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden glass border-t border-slate-800/50"
+          >
+            <div className="px-6 py-4 flex flex-col gap-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-slate-300 py-2 border-b border-slate-800/30"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <Link
+                href="/contact"
+                className="text-center px-4 py-3 rounded-full bg-primary text-bg font-semibold mt-2"
+                onClick={() => setIsOpen(false)}
+              >
+                Book Strategy Call
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
+  );
+}
